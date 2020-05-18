@@ -1,1 +1,1 @@
-# RecipeLab
+Vanilla JS project using the MealDB API

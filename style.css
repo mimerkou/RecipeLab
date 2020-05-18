@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Handlee&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Barlow', sans-serif;
+}
+
+header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url(./img/hero.jpg);
+    background-position: center;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 85vh;
+}
+
+h4 {
+    color: #F89223;
+    font-family: 'Handlee', cursive;
+}

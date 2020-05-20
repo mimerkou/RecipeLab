@@ -11,20 +11,28 @@
 </head>
 
 <body>
-    <header>
-        <div class="hero">
-            <h3>Do you like cooking?</h3>
-            <h1>Give yourself a lifetime<br>of cooking confidence</h1>
-            <input type="text" id="search" placeholder="Find a recipe..." />
-            <button class="search-btn" type="button">
-                <i class="fas fa-search"></i>
+    <div class="container">
+        <h3>Do you like cooking?</h3>
+        <h1>The Recipe Lab</h1>
+
+        <div class="flex">
+            <form class="flex" id="submit">
+                <input type="text" id="search" placeholder="Search for recipes by ingredient">
+                <button class="search-btn" type="submit">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form>
+
+            <button class="random-btn" id="random">
+                <i class="fas fa-random"></i>
             </button>
         </div>
-    </header>
 
-    <section class="results">
-        <h2>Results</h2>
-    </section>
+        <div class="result-heading"></div>
+        <div class="meals" id="meals"></div>
+        <div class="single-meal"></div>
+    </div>
+
 
     <script src="./app.js"></script>
 </body>

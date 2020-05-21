@@ -12,10 +12,11 @@
 
 html {
     scroll-behavior: smooth;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)), url(./img/hero.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)), url(./img/hero.jpg);
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
+    color: white;
 }
 
 body {
@@ -23,7 +24,7 @@ body {
 }
 
 .container {
-    margin: auto;
+    margin: 2.5rem auto;
     max-width: 88.5rem;
     display: flex;
     flex-direction: column;
@@ -38,8 +39,8 @@ body {
 }
 
 .container h3 {
-    margin-top: 2.5rem;
-    margin-bottom: -0.7rem;
+    /* margin-top: 2.5rem; */
+    margin-bottom: -0.5rem;
     color: #F89223;
     font-family: 'Handlee', cursive;
     font-size: 2.2rem;
@@ -51,6 +52,17 @@ body {
     margin-bottom: 2.5rem;
 }
 
+.container h2 {
+    /* color: white; */
+    font-size: 3rem;
+    margin-top: 2.5rem;
+    margin-bottom: 1.2rem;
+}
+
+p {
+    font-size: 1.8rem;
+}
+
 input,
 button {
     border: 1px solid #dedede;
@@ -59,6 +71,11 @@ button {
     font-size: 1.5rem;
     padding: 1rem;
     margin: 0;
+}
+
+input:focus,
+button:focus {
+    outline: none;
 }
 
 input[type="text"] {
@@ -87,8 +104,143 @@ button {
     border-bottom-right-radius: 0.5rem;
 }
 
-@media only screen and (max-width: 885px) {}
+.alert {
+    margin: 3rem 0;
+    font-size: 2.3rem;
+    width: 50%;
+    height: 8rem;
+    display: block;
+    background-color: #d9534f;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-@media only screen and (max-width: 767px) {}
+.meals {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 2rem;
+    margin-top: 1rem;
+}
 
-@media only screen and (max-width: 480px) {}
+.meal {
+    cursor: pointer;
+    position: relative;
+    height: 20rem;
+    width: 20rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.meal img {
+    width: 100%;
+    height: 100%;
+    border: 0.4rem solid white;
+    border-radius: 0.2rem;
+}
+
+.meal-info {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s ease-in;
+}
+
+.meal:hover .meal-info {
+    opacity: 1;
+}
+
+.single-meal {
+    margin: 3rem auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.single-meal img {
+    border: 0.4rem solid white;
+    border-radius: 0.2rem;
+    width: 55rem;
+}
+
+.single-meal p {
+    line-height: 1.5;
+    letter-spacing: 0.05rem;
+    padding: 0 3rem;
+}
+
+.single-meal ul {
+    padding-left: 0;
+    list-style-type: none;
+    font-size: 1.7rem;
+    letter-spacing: 0.05rem;
+}
+
+.single-meal-info {
+    margin-top: 1.5rem;
+    padding: 1rem;
+}
+
+.main h2 {
+    text-decoration: underline;
+}
+
+@media only screen and (max-width: 885px) {
+    .meals {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .single-meal img {
+        width: 45rem;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .meals {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .meal {
+        height: 20rem;
+        width: 20rem;
+    }
+
+    .single-meal {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .single-meal img {
+        width: 35rem;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    input[type="text"] {
+        width: 100%;
+    }
+
+    .meals {
+        grid-template-columns: 1fr;
+    }
+
+    .meal {
+        height: 30rem;
+        width: 30rem;
+    }
+
+    .single-meal img {
+        width: 25rem;
+    }
+}
